@@ -6,11 +6,21 @@
 
 from pgl import GWindow, GRect, GOval, GLine, GLabel
 
-# Setting up initial window dimensions. You can change these if you want. They are in number of pixels.
-WIDTH = 600
-HEIGHT = 600
+height = 400
+width = 600
+gw = GWindow(width, height)
+stripe_colors = ["red","orange","yellow","green","blue","purple"]
 
-# Creating the window
-gw = GWindow(WIDTH, HEIGHT)
+def draw_flag():
+    gw = GWindow(width, height)
+    draw_stripe()
 
-# And you can take it from here! I'm excited to see what you create!
+def draw_stripe():
+    for y in range(height):
+        for x in range(width):
+            r = GRect(x, y, 1, 1)
+            stripe_number = y // 67
+            r.set_color(stripe_colors[stripe_number])
+            gw.add(r)
+
+draw_flag()

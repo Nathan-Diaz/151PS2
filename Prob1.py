@@ -16,7 +16,19 @@ def digital_root(n):
     Outputs:
         int: The digital root of the provided number
     """
-    # Add your code below!
+
+    t = n % 9 
+    if (t == 0): # if t is 0, then the digital root is 9
+        print(9)
+    else: print(t)
+    return (t)
+
+if __name__ == '__main__':
+    # You can alter the below value to test your function with a variety
+    # of numeric inputs!
+
+    test_input = 1729
+    print("The digital root of ", test_input, " is ", digital_root(test_input))
 
 
 
