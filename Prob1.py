@@ -1,7 +1,7 @@
 ########################################
-# Name:
-# Collaborators:
-# Estimated time spent (hr):
+# Name: Nathan G. Diaz
+# Collaborators: N/A
+# Estimated time spent (hr): 3
 ########################################
 
 def digital_root(n):
